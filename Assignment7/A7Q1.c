@@ -1,0 +1,32 @@
+#include<stdio.h>
+
+void Pattern(int iNo)
+{
+    int iCnt=0;
+    
+    if(iNo<0)
+    {
+        iNo=-iNo;
+    }
+    for(iCnt=1;iCnt<=iNo;iCnt++)
+    {
+        if(iCnt%2==1)
+        {
+            printf("$\t");
+        }
+        else
+        {
+            printf("*\t");
+        }
+    }
+}
+int main()
+{
+    int iValue;
+
+    printf("enter the number:");
+    scanf("%d",&iValue);
+
+    Pattern(iValue);
+    return 0;
+}
