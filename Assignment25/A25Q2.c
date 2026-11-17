@@ -1,0 +1,49 @@
+/*
+
+Enter the character:A
+It is Capital
+
+Enter the character:a
+It is not capital
+
+*/
+#include<stdio.h>
+
+#define TRUE 1
+#define FALSE 0
+
+typedef int BOOL;
+
+BOOL ChkCapital(char ch)
+{
+    if(ch>='A'&&ch<='Z')
+    {
+        return TRUE;
+    }
+    else
+    {
+        return FALSE;
+
+    }
+}
+int main()
+{
+    char cValue='\0';
+    BOOL bRet=FALSE;
+
+    printf("Enter the character:");
+    scanf("%c",&cValue);
+
+    bRet=ChkCapital(cValue);
+
+    if(bRet==TRUE)
+    {
+        printf("It is Capital");
+
+    }
+    else
+    {
+        printf("It is not capital");
+    }
+    return 0;
+}
